@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas con VUEjs</title>
+</head>
+<style>
+    .color_rojo {
+        color: red; 
+    }
+    .color_verde {
+        color: green;
+    }
+</style>
+<body>
+    <h1> Aprendiendo VUEjs</h1>
+    <div id="app">
+        <ul>
+            <p>{{saludar}}</p>
+
+            <h2>=======Directivas Vue=======</h2>
+            <h3>v-show</h3>
+            <p v-show="activo === false">Texto solo si activo=false</p>
+            
+            
+            <h3>v-if - condicional</h3>
+            <p v-if="activo === true">Sólo si es activo</p>
+            <p v-else> v-else NO es activo</p>
+            
+            
+            <h3>V-FOR Directivas para ciclos</h3>
+            <li v-for="numero in lista" :key="numero"> Número: {{numero}}</li>
+            
+            
+            <h3>v-html Directiva para pintar html</h3>
+            <p v-html="blog"></p>
+            
+            
+            <h3>Binding</h3>
+            <p>
+                <input type="text" v-model="texteando">
+            </p>
+            <p>{{texteando}}</p>
+            
+            
+            <h3>Enventos y Funciones</h3>
+            <button @click="saluda()">Saluda</button>
+            <button @click="inputCambios('Mis cambios en parametros de la función InputCambios')">InputCambios</button>
+            <br><br>
+            <input type="text" placeholder="nombres" v-model="full_name">
+            <a href="#" @click="verificarFullName()">Verificar Nombre</a>
+            <p style="color:red;">{{validation_error}}</p>
+            <br><br>
+            
+            
+            <h3>Binding de clases</h3>
+            <label for="nombre" :class="{color_verde:text_success,color_rojo:text_error}">
+                Nombres:
+            </label>
+            <input type="text" v-model="nombre">
+            <button @click="verificarNombre()">Comprobar</button>
+            <br><br>
+
+
+            <h3>Binding de Styles</h3>
+            <input type="text" v-model="sizetxt">
+            <button @click="cambiarSize()">Cambiar Tamaño</button>
+            <p :style="{fontSize: sizetxt + 'px' }">Curso Vue.js</p><!--En Vue no se pueden usar parametros 
+                con guión medio como font-size, por lo que se requiere hacer uso de camellCase fontSize
+            -->
+
+
+        </ul>
+    </div>
+
+    
+    <div id="app2">
+        <h2>Propiedades en Vue.js</h2>
+        <input type="number" v-model="num1">
+        <input type="number" v-model="num2">
+        <button @click="sumarNumeros()">Sumar</button>
+        <p>{{ sumarNumeros() }}</p>
+        <p>-</p>
+        <p>-</p>
+        <p>-</p>
+        <p>{{ sumaComputada }}</p>
+
+    </div>
+    
+</body>
+</html>
+
+<script type="text/javascript" src="vue@2.6.14.js"></script>
+<script type="text/javascript" src="practica.js"></script>
