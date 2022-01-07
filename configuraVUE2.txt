@@ -1,3 +1,14 @@
 
 
 vue2
+### Configura 06-01-2022
+git init
+git status
+git add .
+git commit -m "X"
+
+
+git branch -M master 
+git remote add origin https://github.com/Optimussky/practivavue.git
+
+git push origin master
