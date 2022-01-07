@@ -26,3 +26,9 @@ git push
 
 ## para descargar haciendo un git clone.....
 ## previamente se puede habilitar desde github la rama X como default 
+
+git status
+git add .
+git commit - "Cambios"
+git push
+
