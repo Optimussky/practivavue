@@ -22,3 +22,7 @@ git add .
 git commit -m "X"
 
 git push
+
+
+## para descargar haciendo un git clone.....
+## previamente se puede habilitar desde github la rama X como default 
