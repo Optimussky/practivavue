@@ -1,7 +1,7 @@
 
 
 vue2
-### Configura 06-01-2022
+### Configura 06-01-2022 primera vez
 git init
 git status
 git add .
@@ -12,3 +12,13 @@ git branch -M master
 git remote add origin https://github.com/Optimussky/practivavue.git
 
 git push origin master
+
+
+### Segunda vez para subir
+
+git init
+git status
+git add .
+git commit -m "X"
+
+git push
